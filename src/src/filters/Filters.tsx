@@ -1,5 +1,6 @@
 import { type JSX } from "react";
 import { Collapse, Form } from "react-bootstrap";
+import { gameTypes } from "../enums";
 
 type FilterProps = {
   onParentFilterChange: (value: string) => void;
@@ -45,7 +46,7 @@ function Filters({
   function setChildFilter(parentFilter: string): JSX.Element {
     //
 
-    if (parentFilter == "Single-player") {
+    if (parentFilter == gameTypes.SinglePlayer) {
       // {
       //   console.log(`SPGenre collapse made at ${new Date()}`);
       // }
@@ -89,10 +90,7 @@ function Filters({
   }
 
   return (
-    <div
-      className="p-4 bg-dark rounded"
-      style={{ width: "100%", maxWidth: "230px" }}
-    >
+    <div className={`p-4 bg-dark rounded`} style={{ width: "235px" }}>
       <h1 className="p-4 text-bg-dark">Filters</h1>
 
       {parentFilters.map((pFilter) => (
