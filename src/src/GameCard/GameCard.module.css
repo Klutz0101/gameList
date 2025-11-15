@@ -1,0 +1,13 @@
+.cardHover:hover {
+  transition: 0.3s ease;
+  background-color: hwb(0 77% 23% / 0.993); /* darker shade */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.cardHover:active {
+  transition: 0s;
+  background-color: hwb(0 50% 50% / 0.993); /* darker shade */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
