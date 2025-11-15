@@ -43,7 +43,7 @@ function Header({ page = pageType.Home }: headerProps) {
           <Navbar.Brand onClick={() => nav("/")} style={{ cursor: "pointer" }}>
             <img
               alt=""
-              src="/public/logo.png"
+              src="/gameList/logo.png"
               width="30"
               height="30"
               className="d-inline-block align-top"

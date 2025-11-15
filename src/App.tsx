@@ -4,16 +4,12 @@ import Game from "./pages/Game.tsx";
 import AboutMe from "./pages/AboutMe.tsx";
 import type { game } from "./src/models.ts";
 import { bully, gh2, gtaSA, LOZBotW, phasmophobia } from "./src/Games.ts";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const GamesContext = createContext<game[]>([]);
 
 function App() {
-  const [games, setGames] = useState<game[]>([]);
-
-  useEffect(() => {
-    setGames([bully, gtaSA, phasmophobia, LOZBotW, gh2]);
-  }, []);
+  const [games] = useState<game[]>([bully, gtaSA, phasmophobia, LOZBotW, gh2]);
 
   return (
     <GamesContext.Provider value={games}>
