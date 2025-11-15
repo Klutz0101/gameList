@@ -9,13 +9,9 @@ import { createContext, useState } from "react";
 export const GamesContext = createContext<game[]>([]);
 
 function App() {
-  const [games, setGames] = useState<game[]>([
-    bully,
-    gtaSA,
-    phasmophobia,
-    LOZBotW,
-    gh2,
-  ]);
+  const [games, setGames] = useState<game[]>([]);
+
+  setGames([bully, gtaSA, phasmophobia, LOZBotW, gh2]);
 
   return (
     <GamesContext value={games}>

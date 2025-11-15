@@ -159,7 +159,7 @@ function GameList({ parentFilter = "", childFilter = "" }: GameListProps) {
         <input
           className="d-inline-flex me-2 w-25 form-control"
           placeholder="Search"
-          onChange={(e) => setSearchQuery((sq) => (sq = e.target.value))}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <Button variant="primary">Search</Button>
       </div>
