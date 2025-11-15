@@ -14,7 +14,7 @@ function App() {
   setGames([bully, gtaSA, phasmophobia, LOZBotW, gh2]);
 
   return (
-    <GamesContext value={games}>
+    <GamesContext.Provider value={games}>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
       </Router>
-    </GamesContext>
+    </GamesContext.Provider>
   );
 }
 
